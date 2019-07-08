@@ -1,0 +1,30 @@
+<script>
+   var kleuren= [0, 1, 2];
+   kleuren[0]= 'red'
+   kleuren[1]= 'green'
+   kleuren[2]= 'orange'
+   var positie= 0;
+
+    function overspringen(licht){
+        licht = document.getElementById("licht");
+        licht.style.backgroundColor= kleuren[positie];
+        positie= positie + 1;
+        
+        if(positie > 2){
+            positie= 0
+        }
+	}
+   
+
+</script>
+<style>
+    span{
+        display: block;
+        border:2px solid black;
+        height: 40px;
+        width: 40px;
+    }
+</style>
+
+<span id=licht></span><br>
+<input type=button onclick="overspringen(licht)" value= "Klik mij">
